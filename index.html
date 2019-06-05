@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  </head>
+  <body>
+  <!--Двери-->
+    <div class="container doors">
+      <div class="col-12" style="height: 100px;"></div>
+      <div class="row mx-auto">
+        <img src="door.png" style="height: 500px; width: 300px;" class="mr-5" id="door">
+        <img src="door2.png" style="height: 500px; width: 300px; margin-left: 50px;" class="mr-5">
+        <img src="portal.gif" style="height: 500px; width: 300px; margin-left: 50px;" id="portal">
+      </div>
+    </div>
+  <!--Локация Хогвартс-->
+    <div class="col-12 hogwarts" style="background-image: url(bg.jpg); height: 800px; background-size: 100% 100%; display: none;">
+      <h1 class="text-white">Помоги Гарри найти его метлу, плащ и палочку! Надо заработать 3 очка!</h1>
+      <h1 class="text-white">тут будут очки</h1>
+      <button class="btn btn-success">Выйди из игры</button>
+      <div>
+        <img class="item1 position-absolute" src="gun.png" style="height: 30px; width: 60px; margin-top: 500px;">
+        <img class="item2 position-absolute" src="mantiya.png" style="height: 30px;  width: 60px; margin-left: 400px; margin-top: 600px;">
+        <img class="item3 position-absolute" src="metla.png" style="height: 30px;  width: 60px; margin-left: 600px; margin-top: 250px;">
+        <img class="item4 position-absolute" src="palochka.png" style="height: 30px;  width: 60px; margin-left: 800px; margin-top: 500px;">
+        <img class="item5 position-absolute" src="ring.png" style="height: 30px;  width: 60px; margin-left: 1200px; margin-top: 100px;">
+      </div>
+    </div>
+   <!--Локация RaM-->
+   <div class="col-12 RaM" style="background-image: url(bg.png); height: 800px; background-size: 100% 100%; display: none;">
+     
+   </div>
+   <script type="text/javascript"> 
+    //спрятанные двери и появление локации
+     door.onclick = function() {
+       alert( 'Добро пожаловать в хогвартс' );
+        display = document.querySelector(".doors").style.display;
+          if(display=='none'){
+            document.querySelector(".doors").style.display='block';
+          }else{
+            document.querySelector(".doors").style.display='none';
+          }
+        display = document.querySelector(".hogwarts").style.display;
+          if(display=='none'){
+            document.querySelector(".hogwarts").style.display='block';
+          }else{
+            document.querySelector(".hogwarts").style.display='none';
+          }
+      };
+     portal.onclick = function() {
+      alert('Морти, стой я забыл свою бутылку!');
+          display = document.querySelector(".doors").style.display;
+          if(display=='none'){
+            document.querySelector(".doors").style.display='block';
+          }else{
+            document.querySelector(".doors").style.display='none';
+          }
+        display = document.querySelector(".RaM").style.display;
+          if(display=='none'){
+            document.querySelector(".RaM").style.display='block';
+          }else{
+            document.querySelector(".RaM").style.display='none';
+          }
+     }
+      document.querySelector(".item1").onclick = function(){
+        alert('упс')
+      }
+      document.querySelector(".item2").onclick = function(){
+        document.querySelector(".item2").style.display = "none";
+      }
+      document.querySelector(".item3").onclick = function(){
+        document.querySelector(".item3").style.display = "none";
+      }
+      document.querySelector(".item4").onclick = function(){
+        document.querySelector(".item4").style.display = "none";
+      }
+      document.querySelector(".item5").onclick = function(){
+        alert('упс')
+      }
+   </script>
+  </body>
+</html>
